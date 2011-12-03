@@ -5,12 +5,27 @@ ADD_EXECUTABLE(main main.cpp filereader.cpp recognition.cpp svm-predict.cpp svm.
 INCLUDE_DIRECTORIES(../include/)
 INCLUDE_DIRECTORIES(../include/opencv/)
 
-TARGET_LINK_LIBRARIES(
-	main 
-	${PROJECT_SOURCE_DIR}/lib/libopencv_core.so.2.3.1
-	${PROJECT_SOURCE_DIR}/lib/libopencv_highgui.so.2.3.1
-	${PROJECT_SOURCE_DIR}/lib/libopencv_imgproc.so.2.3.1
-)
+IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+	# Mac OS X specific code
+	TARGET_LINK_LIBRARIES(
+		main
+		${PROJECT_SOURCE_DIR}/lib/opencv_core.2.3.1
+		${PROJECT_SOURCE_DIR}/lib/opencv_highgui.2.3.1
+		${PROJECT_SOURCE_DIR}/lib/opencv_imgproc.2.3.1
+	)
+	SET(OperatingSystem "Mac OS X")
+ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+
+IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+	# Linux specific code
+	TARGET_LINK_LIBRARIES(
+		main
+		${PROJECT_SOURCE_DIR}/lib/libopencv_core.so.2.3.1
+		${PROJECT_SOURCE_DIR}/lib/libopencv_highgui.so.2.3.1
+		${PROJECT_SOURCE_DIR}/lib/libopencv_imgproc.so.2.3.1
+	)
+	SET(OperatingSystem "Linux")
+ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 
 file(COPY ${PROJECT_SOURCE_DIR}/rc/model		DESTINATION ${PROJECT_BINARY_DIR}/bin)
 file(COPY ${PROJECT_SOURCE_DIR}/rc/scale_para	DESTINATION ${PROJECT_BINARY_DIR}/bin)

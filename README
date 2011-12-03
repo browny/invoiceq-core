@@ -13,3 +13,6 @@ $ make
 // Run the exe
 $ cd bin
 $ ./main <image filename> // ex: ./main test.jpg
+
+// Exit
+press 'Esc' to close the result image and quit

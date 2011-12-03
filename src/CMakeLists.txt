@@ -23,6 +23,7 @@ IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 		${PROJECT_SOURCE_DIR}/lib/libopencv_core.so.2.3.1
 		${PROJECT_SOURCE_DIR}/lib/libopencv_highgui.so.2.3.1
 		${PROJECT_SOURCE_DIR}/lib/libopencv_imgproc.so.2.3.1
+		${PROJECT_SOURCE_DIR}/lib/libopencv_features2d.so.2.3.1
 	)
 	SET(OperatingSystem "Linux")
 ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")

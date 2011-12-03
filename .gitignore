@@ -1,0 +1,14 @@
+*.o
+*.jpg
+.cproject
+.project
+.settings/
+Debug/
+
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!README
+!.gitignore
+

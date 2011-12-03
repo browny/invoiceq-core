@@ -12,6 +12,7 @@ IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 		${PROJECT_SOURCE_DIR}/lib/libopencv_core.2.3.1.dylib
 		${PROJECT_SOURCE_DIR}/lib/libopencv_highgui.2.3.1.dylib
 		${PROJECT_SOURCE_DIR}/lib/libopencv_imgproc.2.3.1.dylib
+		${PROJECT_SOURCE_DIR}/lib/libopencv_features2d.2.3.1.dylib
 	)
 	SET(OperatingSystem "Mac OS X")
 ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")

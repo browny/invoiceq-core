@@ -6,7 +6,7 @@
 #include <float.h>
 #include <string.h>
 #include <stdarg.h>
-#include "svm.h"
+#include "../include/svm.h"
 
 int libsvm_version = LIBSVM_VERSION;
 typedef float Qfloat;

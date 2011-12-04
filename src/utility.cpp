@@ -1,5 +1,5 @@
 
-#include "utility.h"
+#include "../include/utility.h"
 
 double dist(CvPoint a, CvPoint b) {
 	return sqrt(pow((double) (a.x - b.x), 2) + pow((double) (a.y - b.y), 2));
@@ -118,7 +118,6 @@ void connectComponent(IplImage* src, const int poly_hull0, const float perimScal
 	cvReleaseMemStorage(&mem_storage);
 
 }
-
 
 void getSubImg(IplImage* src, const CvRect &roiRect, IplImage* subImg) {
 

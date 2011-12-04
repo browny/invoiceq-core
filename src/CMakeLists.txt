@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 2.8)
 
 ADD_EXECUTABLE(main main.cpp filereader.cpp recognition.cpp svm-predict.cpp svm.cpp textlocation.cpp utility.cpp)
 
-INCLUDE_DIRECTORIES(../include/)
-INCLUDE_DIRECTORIES(../include/opencv/)
+#INCLUDE_DIRECTORIES(../include/)
+#INCLUDE_DIRECTORIES(../include/opencv/)
 
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 	# Mac OS X specific code

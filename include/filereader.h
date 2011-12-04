@@ -3,8 +3,8 @@
 #define _FILEREADER_H_
 
 #include <string>
-#include <core/core_c.h>
-#include <highgui/highgui_c.h>
+#include "./opencv/core/core_c.h"
+#include "./opencv/highgui/highgui_c.h"
 using namespace std;
 
 class FileReader {

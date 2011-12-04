@@ -1,6 +1,6 @@
 
-#include "textlocation.h"
-#include "utility.h"
+#include "../include/textlocation.h"
+#include "../include/utility.h"
 
 TextLocation::TextLocation(int width, int height) :
 	ksmoothSize(3),

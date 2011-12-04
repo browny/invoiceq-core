@@ -1,10 +1,9 @@
 
-#include "filereader.h"
+#include "../include/filereader.h"
 #include <assert.h>
 #include <iostream>
-#include <imgproc/imgproc_c.h>
+#include "../include/opencv/imgproc/imgproc_c.h"
 using namespace std;
-
 
 FileReader::FileReader(int argc, const char** argv) :
 	kLongsideMax(640) {
@@ -13,7 +12,6 @@ FileReader::FileReader(int argc, const char** argv) :
 	scaledImg = 0;
 
 	if (argc < 2) {
-
 
 	} else {
 
@@ -39,13 +37,10 @@ bool FileReader::readFile(string filePath) {
 
 		scaleImg(*m_srcImg);
 
-
 		readOK = true;
 		return readOK;
 
 	}
-
-
 }
 
 string FileReader::extractFilename(const string& path) {

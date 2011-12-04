@@ -1,7 +1,7 @@
 
-#include "filereader.h"
-#include "textlocation.h"
-#include "recognition.h"
+#include "../include/filereader.h"
+#include "../include/textlocation.h"
+#include "../include/recognition.h"
 
 void singleTest(string fileName); // single image test
 void batchTest();                 // batch test
@@ -16,7 +16,6 @@ int main (int argc, const char **argv) {
 	//genTrainData();
 
 	return 1;
-
 }
 
 void singleTest(string fileName) {
@@ -142,13 +141,8 @@ void batchTest() {
 				savePath = "./InvoiceDataSet0523-testFailBox/" + imgName + "_AdvEdge";
 				cvSaveImage(savePath.c_str(), txt.m_advancedEdgeImg);*/
 
-
 			}
-
-
-
 		}
-
 	}
 
 	inFile.close();
@@ -199,11 +193,8 @@ void genTrainData() {
 				cvSaveImage(savePath.c_str(), txt.outImg);
 
 			}
-
 		}
-
 	}
-
 
 	inFile.close();
 

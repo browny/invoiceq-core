@@ -6,8 +6,9 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
-#include <core/core_c.h>
-#include <highgui/highgui_c.h>
+#include "./opencv/core/core_c.h"
+#include "./opencv/highgui/highgui_c.h"
+#include "./opencv/imgproc/imgproc_c.h"
 #include "utility.h"
 #include "svm-predict.h"
 using namespace std;

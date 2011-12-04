@@ -1,6 +1,5 @@
 
-#include "recognition.h"
-#include <imgproc/imgproc_c.h>
+#include "../include/recognition.h"
 
 Recognition::Recognition() :
     kClassCount(10),
@@ -21,7 +20,6 @@ Recognition::Recognition(const vector<CvRect> &segRects) :
 	recognizedNum = "";
 	m_numberScore = new double[kClassCount];
 	m_svmPredictor = NULL;
-
 
 }
 
@@ -254,7 +252,6 @@ void Recognition::getBinaryImgYHist(const IplImage* img, CvRect rect) {
 	trimVector(hist);
 
 	plot1DHisto(hist, 0, "y");
-
 
 }
 

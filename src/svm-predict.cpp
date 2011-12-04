@@ -1,5 +1,5 @@
 
-#include "svm-predict.h"
+#include "../include/svm-predict.h"
 #include <iostream>
 
 using namespace std;

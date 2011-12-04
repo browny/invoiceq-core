@@ -6,9 +6,9 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
-#include <core/core_c.h>
-#include <imgproc/imgproc_c.h>
-#include <highgui/highgui_c.h>
+#include "./opencv/core/core_c.h"
+#include "./opencv/imgproc/imgproc_c.h"
+#include "./opencv/highgui/highgui_c.h"
 
 using namespace std;
 

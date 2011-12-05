@@ -4,9 +4,9 @@ ADD_EXECUTABLE(main main.cpp filereader.cpp recognition.cpp svm-predict.cpp svm.
 
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 	# Mac OS X specific code
-	FIND_LIBRARY(CORE_LIB    NAMES opencv_core    PATHS "../lib/")
-	FIND_LIBRARY(IMGPROC_LIB NAMES opencv_imgproc PATHS "../lib/")
-	FIND_LIBRARY(HIGHGUI_LIB NAMES opencv_highgui PATHS "../lib/")
+	FIND_LIBRARY(CORE_LIB    NAMES opencv_core    PATHS "../lib/mac_sharelib")
+	FIND_LIBRARY(IMGPROC_LIB NAMES opencv_imgproc PATHS "../lib/mac_sharelib")
+	FIND_LIBRARY(HIGHGUI_LIB NAMES opencv_highgui PATHS "../lib/mac_sharelib")
 	TARGET_LINK_LIBRARIES(main ${CORE_LIB})
 	TARGET_LINK_LIBRARIES(main ${IMGPROC_LIB})
 	TARGET_LINK_LIBRARIES(main ${HIGHGUI_LIB})

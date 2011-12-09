@@ -15,6 +15,12 @@ ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 	# Linux specific code
+	FIND_LIBRARY(CORE_LIB    NAMES opencv_core    PATHS "../lib/linux_sharelib")
+	FIND_LIBRARY(IMGPROC_LIB NAMES opencv_imgproc PATHS "../lib/linux_sharelib")
+	FIND_LIBRARY(HIGHGUI_LIB NAMES opencv_highgui PATHS "../lib/linux_sharelib")
+	TARGET_LINK_LIBRARIES(main ${CORE_LIB})
+	TARGET_LINK_LIBRARIES(main ${IMGPROC_LIB})
+	TARGET_LINK_LIBRARIES(main ${HIGHGUI_LIB})
 	SET(OperatingSystem "Linux")
 ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 

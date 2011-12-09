@@ -4,9 +4,9 @@ ADD_EXECUTABLE(main main.cpp filereader.cpp recognition.cpp svm-predict.cpp svm.
 
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 	# Mac OS X specific code
-	FIND_LIBRARY(CORE_LIB    NAMES opencv_core    PATHS "../lib/mac_sharelib")
-	FIND_LIBRARY(IMGPROC_LIB NAMES opencv_imgproc PATHS "../lib/mac_sharelib")
-	FIND_LIBRARY(HIGHGUI_LIB NAMES opencv_highgui PATHS "../lib/mac_sharelib")
+	FIND_LIBRARY(CORE_LIB    NAMES opencv_core    PATHS "../lib/Mac")
+	FIND_LIBRARY(IMGPROC_LIB NAMES opencv_imgproc PATHS "../lib/Mac")
+	FIND_LIBRARY(HIGHGUI_LIB NAMES opencv_highgui PATHS "../lib/Mac")
 	TARGET_LINK_LIBRARIES(main ${CORE_LIB})
 	TARGET_LINK_LIBRARIES(main ${IMGPROC_LIB})
 	TARGET_LINK_LIBRARIES(main ${HIGHGUI_LIB})
@@ -15,12 +15,9 @@ ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 	# Linux specific code
-	FIND_LIBRARY(CORE_LIB    NAMES opencv_core    PATHS "../lib/linux_sharelib")
-	FIND_LIBRARY(IMGPROC_LIB NAMES opencv_imgproc PATHS "../lib/linux_sharelib")
-	FIND_LIBRARY(HIGHGUI_LIB NAMES opencv_highgui PATHS "../lib/linux_sharelib")
-	TARGET_LINK_LIBRARIES(main ${CORE_LIB})
-	TARGET_LINK_LIBRARIES(main ${IMGPROC_LIB})
-	TARGET_LINK_LIBRARIES(main ${HIGHGUI_LIB})
+	TARGET_LINK_LIBRARIES(main ${PROJECT_SOURCE_DIR}/lib/Linux32/libopencv_core.so.2.3.1)
+	TARGET_LINK_LIBRARIES(main ${PROJECT_SOURCE_DIR}/lib/Linux32/libopencv_imgproc.so.2.3.1)
+	TARGET_LINK_LIBRARIES(main ${PROJECT_SOURCE_DIR}/lib/Linux32/libopencv_highgui.so.2.3.1)
 	SET(OperatingSystem "Linux")
 ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 

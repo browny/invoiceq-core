@@ -2,7 +2,7 @@
 #include "../include/filereader.h"
 #include <assert.h>
 #include <iostream>
-#include "../include/opencv/imgproc/imgproc_c.h"
+
 using namespace std;
 
 FileReader::FileReader(int argc, const char** argv) :

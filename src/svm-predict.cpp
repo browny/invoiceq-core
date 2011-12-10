@@ -1,6 +1,6 @@
 
-#include "../include/svm-predict.h"
 #include <iostream>
+#include "../include/svm-predict.h"
 
 using namespace std;
 

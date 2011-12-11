@@ -7,7 +7,7 @@ Installation Guide
 	$ sudo apt-get install cmake
 
 2. Clone the project to local
-	$ git clone git@github.com:browny/hand-tracking.git
+	$ git clone git@github.com:browny/invoiceq-core.git
 	$ cd hand-tracking
 
 3. Take out-of-source CMake build

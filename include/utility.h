@@ -14,7 +14,7 @@ double dist(CvPoint a, CvPoint b);
 void inverseBinaryImage(IplImage* img);
 
 void connectComponent(IplImage* src, const int poly_hull0, const float perimScale, int *num,
-		vector<CvRect> &rects, vector<CvPoint> &centers);
+        vector<CvRect> &rects, vector<CvPoint> &centers);
 
 void getSubImg(IplImage* src, const CvRect &roiRect, IplImage* subImg);
 

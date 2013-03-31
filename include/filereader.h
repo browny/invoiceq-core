@@ -10,22 +10,22 @@ using namespace std;
 class FileReader {
 public:
 
-	FileReader(int argc, const char** argv);
+    FileReader(int argc, const char** argv);
 
-	IplImage* scaledImg;
+    IplImage* scaledImg;
 
-	bool readFile(string filePath);
-	string extractFilename(const string& path);
+    bool readFile(string filePath);
+    string extractFilename(const string& path);
 
-	~FileReader();
+    ~FileReader();
 
 private:
 
-	const double kLongsideMax;
+    const double kLongsideMax;
 
-	IplImage* m_srcImg;
+    IplImage* m_srcImg;
 
-	void scaleImg(const IplImage &srcImg);
+    void scaleImg(const IplImage &srcImg);
 
 };
 

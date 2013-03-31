@@ -10,41 +10,40 @@ using namespace std;
 
 
 struct scale_para_str {
-	int index;
-	double bottom_value;
-	double up_value;
+    int index;
+    double bottom_value;
+    double up_value;
 };
 
 class SvmPredict {
 public:
 
-	SvmPredict(const string &dir, int featureLen);
+    SvmPredict(const string &dir, int featureLen);
 
-	void predict(double* input_feature, int len, double* prob_estimates);
+    void predict(double* input_feature, int len, double* prob_estimates);
 
 
-	~SvmPredict();
+    ~SvmPredict();
 
 
 private:
 
-	string filePathDir;
+    string filePathDir;
 
-	int max_nr_attr;
-	int predict_probability;
+    int max_nr_attr;
+    int predict_probability;
 
-	//�s��scale�һݪ��Ѽ�
-	double scale_bottom;
-	double scale_up;
-	int scale_para_str_size;
+    double scale_bottom;
+    double scale_up;
+    int scale_para_str_size;
 
-	svm_node* x;
-	svm_model* model;
-	scale_para_str* scale_arr;
+    svm_node* x;
+    svm_model* model;
+    scale_para_str* scale_arr;
 
-	void exit_input_error(int line_num);
-	void exit_with_help();
-	void load_scale_para(const char *scale_file_name, int len);
+    void exit_input_error(int line_num);
+    void exit_with_help();
+    void load_scale_para(const char *scale_file_name, int len);
 
 };
 
